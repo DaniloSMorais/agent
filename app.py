@@ -15,6 +15,7 @@ def init_db():
         )
     """)
     c.execute("INSERT OR IGNORE INTO usuarios (username, password) VALUES (?, ?)", ("admin", "1234"))
+    c.execute("INSERT OR IGNORE INTO usuarios (username, password) VALUES (?, ?)", ("pmpr", "rotam2bpm"))
     conn.commit()
     conn.close()
 
