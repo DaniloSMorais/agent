@@ -12,8 +12,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Expõe a porta que o Gunicorn vai usar
-EXPOSE 8000
+EXPOSE 80
 
 # Comando para rodar a aplicação com Gunicorn
 # 'app' é o nome do seu módulo Python, 'app' é a instância do Flask
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "app:app"]
+CMD ["gunicorn", "--bind", "0.0.0.0:80", "app:app"]
